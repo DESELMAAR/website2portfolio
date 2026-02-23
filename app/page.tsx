@@ -8,17 +8,22 @@ import { Navbar } from "@/components/navbar"
 import { ScrollIndicator } from "@/components/scroll-indicator"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { HeroSection } from "@/components/hero-section"
+
 import {
   AnimatedSection,
   AnimatedCard,
   ParticleBackground,
   AnimatedGradientBackground,
 } from "@/components/client-animations"
+import {SnowBackground} from "@/components/ui/snow";
+import {UnderwaterBackground} from "@/components/ui/underwater";
+
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-950">
       {/* Background Effects */}
+      {/*<SnowBackground/>*/}
       <AnimatedGradientBackground />
       <ParticleBackground />
       <ScrollIndicator />
@@ -97,7 +102,10 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-16 px-4 bg-gray-50 dark:bg-gray-900 relative">
+      <section id="skills" className="py-16 px-4   relative">
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <UnderwaterBackground />
+        </div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
@@ -297,7 +305,7 @@ export default function Home() {
                 </CardContent>
                 <CardFooter>
                   <Button variant="outline" className="w-full" asChild>
-                    <Link href="https://github.com/abdessamad-el-maaroufi" target="_blank">
+                    <Link href="https://github.com/deselmaar" target="_blank">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       View Project
                     </Link>
@@ -333,7 +341,7 @@ export default function Home() {
                 </CardContent>
                 <CardFooter>
                   <Button variant="outline" className="w-full" asChild>
-                    <Link href="https://github.com/abdessamad-el-maaroufi" target="_blank">
+                    <Link href="https://github.com/deselmaar" target="_blank">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       View Project
                     </Link>
@@ -442,6 +450,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-white dark:bg-gray-800 relative">
+
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
@@ -455,16 +464,16 @@ export default function Home() {
                   <div className="flex items-center hover:translate-x-1 transition-transform duration-300">
                     <Mail className="w-5 h-5 text-primary mr-3" />
                     <a
-                      href="mailto:contact@abdessamad.dev"
+                      href="mailto:elmaarpro@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      contact@abdessamad.dev
+                      elmaarpro@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center hover:translate-x-1 transition-transform duration-300">
                     <Linkedin className="w-5 h-5 text-primary mr-3" />
                     <a
-                      href="https://linkedin.com/in/abdessamad-el-maaroufi"
+                      href="https://www.linkedin.com/in/abdessamad-el-maaroufi-6b18bb224/"
                       target="_blank"
                       className="text-muted-foreground hover:text-primary transition-colors"
                       rel="noreferrer"
@@ -475,7 +484,7 @@ export default function Home() {
                   <div className="flex items-center hover:translate-x-1 transition-transform duration-300">
                     <Github className="w-5 h-5 text-primary mr-3" />
                     <a
-                      href="https://github.com/abdessamad-el-maaroufi"
+                      href="https://github.com/DESELMAAR"
                       target="_blank"
                       className="text-muted-foreground hover:text-primary transition-colors"
                       rel="noreferrer"
@@ -511,21 +520,21 @@ export default function Home() {
             </div>
             <div className="flex gap-4">
               <Link
-                href="https://linkedin.com/in/abdessamad-el-maaroufi"
+                href="https://www.linkedin.com/in/abdessamad-el-maaroufi-6b18bb224/"
                 target="_blank"
                 className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
               >
                 <Linkedin className="w-5 h-5" />
               </Link>
               <Link
-                href="https://github.com/abdessamad-el-maaroufi"
+                href="https://github.com/DESELMAAR"
                 target="_blank"
                 className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
               >
                 <Github className="w-5 h-5" />
               </Link>
               <Link
-                href="mailto:contact@abdessamad.dev"
+                href="mailto:elmaarpro@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
               >
                 <Mail className="w-5 h-5" />

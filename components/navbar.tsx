@@ -93,7 +93,7 @@ export function Navbar() {
               transition={{ delay: 0.8 }}
             >
               <Button variant="outline" size="sm" asChild>
-                <Link href="/documents/abdessamad-resume.pdf" target="_blank" download>
+                <Link href="https://drive.google.com/file/d/1PCXY1Tf1u-El4TxIwVvV73jQanWMDZ80/view?usp=sharing" target="_blank" download>
                   Download CV
                 </Link>
               </Button>
@@ -150,7 +150,7 @@ export function Navbar() {
               ))}
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}>
                 <Link
-                  href="/documents/abdessamad-resume.pdf"
+                  href="https://drive.google.com/file/d/1PCXY1Tf1u-El4TxIwVvV73jQanWMDZ80/view?usp=sharing"
                   target="_blank"
                   download
                   className="block px-3 py-2 rounded-md text-base font-medium hover:text-purple-600 dark:hover:text-purple-400 transition-colors"

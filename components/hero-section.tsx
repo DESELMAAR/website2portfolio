@@ -51,7 +51,7 @@ export function HeroSection() {
                 <Link href="#projects">View Projects</Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="/documents/abdessamad-resume.pdf" target="_blank" download>
+                <Link href="https://drive.google.com/file/d/1PCXY1Tf1u-El4TxIwVvV73jQanWMDZ80/view?usp=sharing" target="_blank" download>
                   <Download className="w-4 h-4 mr-2" />
                   Download CV
                 </Link>
@@ -67,21 +67,21 @@ export function HeroSection() {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <Link
-                href="https://linkedin.com/in/abdessamad-el-maaroufi"
+                href="https://www.linkedin.com/in/abdessamad-el-maaroufi-6b18bb224/"
                 target="_blank"
                 className="text-muted-foreground hover:text-primary transition-colors transform hover:scale-110 duration-300"
               >
                 <Linkedin className="w-6 h-6" />
               </Link>
               <Link
-                href="https://github.com/abdessamad-el-maaroufi"
+                href="https://github.com/deselmaar"
                 target="_blank"
                 className="text-muted-foreground hover:text-foreground transition-colors transform hover:scale-110 duration-300"
               >
                 <Github className="w-6 h-6" />
               </Link>
               <Link
-                href="mailto:contact@abdessamad.dev"
+                href="mailto:elmaarpro@gmail.com"
                 className="text-muted-foreground hover:text-destructive transition-colors transform hover:scale-110 duration-300"
               >
                 <Mail className="w-6 h-6" />

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { sendContactEmail } from "@/app/actions"
 import { useToast } from "@/hooks/use-toast"
 import { motion } from "framer-motion"
+import {SnowBackground} from "@/components/ui/snow";
 
 export function ContactForm() {
   const { toast } = useToast()
@@ -68,13 +69,15 @@ export function ContactForm() {
 
   return (
     <motion.form
-      className="space-y-4"
+      className="space-y-4 "
       onSubmit={handleSubmit}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium">
             Name
