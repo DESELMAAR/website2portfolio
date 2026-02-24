@@ -6,7 +6,6 @@ import { Github, Linkedin, Mail, Download, ArrowDown, MapPin } from "lucide-reac
 import { Button } from "@/components/ui/button"
 import { AnimatedText, ClientMotion } from "@/components/client-animations"
 import ArrowButton from "./ArrowButton"
-import SparkleButton from "./SparkleButton"
 
 export function HeroSection() {
   return (
