@@ -5,6 +5,8 @@ import Link from "next/link"
 import { Github, Linkedin, Mail, Download, ArrowDown, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { AnimatedText, ClientMotion } from "@/components/client-animations"
+import ArrowButton from "./ArrowButton"
+import SparkleButton from "./SparkleButton"
 
 export function HeroSection() {
   return (
@@ -47,15 +49,23 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              <Button asChild>
+              <ArrowButton asChild>
                 <Link href="#projects">View Projects</Link>
-              </Button>
-              <Button variant="outline" asChild>
-                <Link href="https://drive.google.com/file/d/1PCXY1Tf1u-El4TxIwVvV73jQanWMDZ80/view?usp=sharing" target="_blank" download>
-                  <Download className="w-4 h-4 mr-2" />
-                  Download CV
+              </ArrowButton>
+
+              {/* Use ONLY ONE download button - either the regular Button or SparkleButton */}
+              {/* <SparkleButton asChild variant="outline"> */}
+                <Link
+                  href="https://drive.google.com/file/d/1PCXY1Tf1u-El4TxIwVvV73jQanWMDZ80/view?usp=sharing"
+                  target="_blank"
+                  download
+                  className="inline-flex items-center gap-2"
+                >
+                  <Download className="h-4 w-4" />
+                  <span>Download CV</span>
                 </Link>
-              </Button>
+              {/* </SparkleButton> */}
+
               <Button variant="secondary" asChild>
                 <Link href="#contact">Contact Me</Link>
               </Button>

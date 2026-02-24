@@ -17,6 +17,9 @@ import {
 } from "@/components/client-animations"
 import {SnowBackground} from "@/components/ui/snow";
 import {UnderwaterBackground} from "@/components/ui/underwater";
+import Button2 from "@/components/ui/Button2"
+import ArrowButton from "@/components/ArrowButton"
+// import { MagneticFieldBackground } from "@/components/ui/magnetic-field"
 
 
 export default function Home() {
@@ -34,7 +37,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <HeroSection />
-
+      
+      {/* exemple of to use shadcn component and create it manueally */}
+      {/* <Button2 className="bg-teal-700" variant="primary" >Click Here</Button2> */}
       {/* About Section */}
       <section id="about" className="py-16 px-4 bg-white dark:bg-gray-800 relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -100,12 +105,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+       {/* <SkillsSectionWithBackground /> */}
       {/* Skills Section */}
       <section id="skills" className="py-16 px-4   relative">
-        <div className="pointer-events-none absolute inset-0 -z-10">
+        {/* <div className="pointer-events-none absolute inset-0 -z-10">
           <UnderwaterBackground />
-        </div>
+        </div> */}
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
@@ -124,7 +129,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 gap-3">
-                    {["HTML5", "CSS3", "Bootstrap", "Tailwind CSS", "JavaScript (ES6+)", "TypeScript", "React.js", "Axios / AJAX"].map((skill) => (
+                    {["HTML5", "CSS3", "Bootstrap", "Tailwind CSS", "JavaScript (ES6+)", "TypeScript", "React.js","Next.js", "Axios / AJAX"].map((skill) => (
                       <Badge key={skill} variant="secondary" className="justify-center py-2 hover:bg-purple-100 dark:hover:bg-purple-900/50 transition-colors">
                         {skill}
                       </Badge>
@@ -365,6 +370,66 @@ export default function Home() {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {["WordPress", "Elementor", "SuperBlank", "Responsive Design", "SEO"].map((tech) => (
+                      <Badge
+                        key={tech}
+                        variant="outline"
+                        className="bg-green-100/50 dark:bg-green-900/50 hover:bg-green-200 transition-colors duration-300"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" className="w-full" disabled>
+                    <Globe className="w-4 h-4 mr-2" />
+                    Client Projects
+                  </Button>
+                </CardFooter>
+              </Card>
+            </AnimatedCard>
+             <AnimatedCard delay={0.5}>
+              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <CardTitle>Application de gestion d’événements avec inscription</CardTitle>
+                  <CardDescription>Plateforme web full-stack pour organiser et gérer des événements</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    Plateforme unique qui centralise tout le workflow d’un événement : création (infos, image, capacité), inscriptions automatisées, génération de billets électroniques (PDF/QR code), et notifications (email/SMS). Côté admin, l’application permet la modération et le suivi global ; côté organisateur, la gestion des participants, export et liste d’attente ; côté participant, inscription (gratuit/payant), consultation et gestion des participations.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Laravel", "React.js", "MySQL", "REST API", "QR Code","PDF Tickets","Notifications","RBAC (Spatie)"].map((tech) => (
+                      <Badge
+                        key={tech}
+                        variant="outline"
+                        className="bg-green-100/50 dark:bg-green-900/50 hover:bg-green-200 transition-colors duration-300"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" className="w-full" disabled>
+                    <Globe className="w-4 h-4 mr-2" />
+                    Client Projects
+                  </Button>
+                </CardFooter>
+              </Card>
+            </AnimatedCard>
+             <AnimatedCard delay={0.6}>
+              <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <CardTitle>Student Attendance & Timetable Management System</CardTitle>
+                  <CardDescription>Full-stack academic management platform</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    A complete web-based system designed to manage student attendance, class schedules, and academic resources. The platform provides secure authentication with Spring Security and JWT, role-based access control, and optimized database architecture with constraints and indexing. It includes timetable generation, conflict detection, absence tracking, and PDF export functionality, delivering a centralized and efficient solution for educational institutions.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Java", "Spring Boot", "Spring Security", "JWT", "React.js","MySQL","REST API","Role-Based Access Control","PDF Export","Database Optimization"].map((tech) => (
                       <Badge
                         key={tech}
                         variant="outline"
