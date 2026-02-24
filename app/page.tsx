@@ -37,7 +37,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <HeroSection />
-      hiiiiiiiiiiiiiiiiiiiiiii
       {/* exemple of to use shadcn component and create it manueally */}
       {/* <Button2 className="bg-teal-700" variant="primary" >Click Here</Button2> */}
       {/* About Section */}
